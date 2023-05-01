@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  source_type: one
+  title: MyText
+  subtitle: MyText
+  text: MyText
+  info: MyText
+  date_yyyy: 1
+  date_mm: 1
+  date_dd: 1
+  display_order: 1.5
+  link: MyString
+
+two:
+  source_type: two
+  title: MyText
+  subtitle: MyText
+  text: MyText
+  info: MyText
+  date_yyyy: 1
+  date_mm: 1
+  date_dd: 1
+  display_order: 1.5
+  link: MyString

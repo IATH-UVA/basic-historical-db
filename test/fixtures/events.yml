@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  era: one
+  event_type: one
+  date_yyyy: 1
+  date_mm: 1
+  date_dd: 1
+  date_display: MyText
+  title: MyText
+  text: MyText
+  link: MyString
+  source: one
+
+two:
+  era: two
+  event_type: two
+  date_yyyy: 1
+  date_mm: 1
+  date_dd: 1
+  date_display: MyText
+  title: MyText
+  text: MyText
+  link: MyString
+  source: two

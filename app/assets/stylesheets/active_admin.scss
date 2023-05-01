@@ -1,0 +1,81 @@
+// Sass variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "active_admin/searchable_select";
+@import "activeadmin_blaze_theme/theme";
+@import "trix";
+
+
+// Overriding any non-variable Sass must be done after the fact.
+// For example, to change the default status-tag color:
+//
+//   .status_tag { background: #6090DB; }
+
+.active_admin {
+  form trix-editor, form .trix-dialogs .trix-dialog--link {
+    width: calc(80% - 22px);
+    border: 1px solid #c9d0d6;
+    border-radius: 3px;
+  }
+
+  form trix-editor {
+    min-height: 100px;
+    padding: 8px 10px 7px;
+    background-color: white;
+
+    &:focus {
+      border: 1px solid #99a2aa;
+      box-shadow: 0 0 4px #99a2aa;
+      outline: none;
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    ul {
+      list-style: disc;
+    }
+  }
+
+  trix-toolbar {
+    .trix-button-group-spacer {
+      flex-grow: 0;
+    }
+
+    .trix-button-row {
+      justify-content: flex-start;
+      button:hover {
+        background-color: $table-selected-color;
+        background-image: none;
+      }
+    }
+  }
+
+  form .trix-dialogs .trix-dialog--link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #eeeeee;
+
+    .trix-button-group {
+      margin-top: 10px;
+    }
+
+  }
+
+  .trix-content p {
+    margin-bottom: 10px;
+  }
+  
+  
+}
