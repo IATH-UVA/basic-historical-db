@@ -61,6 +61,8 @@ GEM
       select2-rails (~> 4.0)
     activeadmin_blaze_theme (1.0.0)
       activeadmin (~> 2.0)
+    activeadmin_quill_editor (1.0.0)
+      activeadmin (~> 2.0)
     activejob (7.0.4.3)
       activesupport (= 7.0.4.3)
       globalid (>= 0.3.6)
@@ -237,16 +239,8 @@ GEM
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
-    sass-rails (6.0.0)
-      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
-    sassc-rails (2.1.2)
-      railties (>= 4.0.0)
-      sassc (>= 2.0)
-      sprockets (> 3.0)
-      sprockets-rails
-      tilt
     select2-rails (4.0.13)
     selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -262,7 +256,6 @@ GEM
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
-    tilt (2.1.0)
     timeout (0.3.2)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -296,6 +289,7 @@ DEPENDENCIES
   activeadmin
   activeadmin-searchable_select
   activeadmin_blaze_theme
+  activeadmin_quill_editor
   bootsnap
   capybara
   debug
@@ -306,7 +300,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
-  sass-rails
+  sassc
   selenium-webdriver
   sprockets-rails
   stimulus-rails

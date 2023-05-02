@@ -10,9 +10,10 @@ gem 'activeadmin'
 gem 'devise'
 gem 'activeadmin_blaze_theme'
 gem 'activeadmin-searchable_select'
-gem 'sass-rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
+gem 'activeadmin_quill_editor'
+gem 'sassc'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"

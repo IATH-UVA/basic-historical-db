@@ -2,10 +2,10 @@ class CreateSources < ActiveRecord::Migration[7.0]
   def change
     create_table :sources do |t|
       t.references :source_type, null: false, foreign_key: true
-      t.text :title
-      t.text :subtitle
+      t.string :title
+      t.string :subtitle
       t.text :text
-      t.text :info
+      t.string :info
       t.integer :date_yyyy
       t.integer :date_mm
       t.integer :date_dd

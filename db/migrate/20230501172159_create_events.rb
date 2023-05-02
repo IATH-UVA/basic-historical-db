@@ -6,8 +6,8 @@ class CreateEvents < ActiveRecord::Migration[7.0]
       t.integer :date_yyyy
       t.integer :date_mm
       t.integer :date_dd
-      t.text :date_display
-      t.text :title
+      t.string :date_display
+      t.string :title
       t.text :text
       t.string :link
       t.references :source, foreign_key: true

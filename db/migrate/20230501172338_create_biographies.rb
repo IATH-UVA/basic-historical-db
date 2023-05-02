@@ -2,10 +2,10 @@ class CreateBiographies < ActiveRecord::Migration[7.0]
   def change
     create_table :biographies do |t|
       t.references :biography_type, null: false, foreign_key: true
-      t.text :title
-      t.text :subtitle
+      t.string :title
+      t.string :subtitle
       t.text :text
-      t.text :info
+      t.string :info
       t.integer :date_yyyy
       t.integer :date_mm
       t.integer :date_dd

@@ -10,19 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_01_191014) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_01_174528) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "action_text_rich_texts", force: :cascade do |t|
-    t.string "name", null: false
-    t.text "body"
-    t.string "record_type", null: false
-    t.bigint "record_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
-  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -80,10 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_191014) do
 
   create_table "biographies", force: :cascade do |t|
     t.bigint "biography_type_id", null: false
-    t.text "title"
-    t.text "subtitle"
+    t.string "title"
+    t.string "subtitle"
     t.text "text"
-    t.text "info"
+    t.string "info"
     t.integer "date_yyyy"
     t.integer "date_mm"
     t.integer "date_dd"
@@ -95,21 +85,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_191014) do
 
   create_table "biography_types", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "eras", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "event_types", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -120,8 +110,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_191014) do
     t.integer "date_yyyy"
     t.integer "date_mm"
     t.integer "date_dd"
-    t.text "date_display"
-    t.text "title"
+    t.string "date_display"
+    t.string "title"
     t.text "text"
     t.string "link"
     t.bigint "source_id"
@@ -134,17 +124,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_191014) do
 
   create_table "source_types", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sources", force: :cascade do |t|
     t.bigint "source_type_id", null: false
-    t.text "title"
-    t.text "subtitle"
+    t.string "title"
+    t.string "subtitle"
     t.text "text"
-    t.text "info"
+    t.string "info"
     t.integer "date_yyyy"
     t.integer "date_mm"
     t.integer "date_dd"
