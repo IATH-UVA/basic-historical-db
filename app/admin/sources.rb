@@ -1,7 +1,7 @@
 ActiveAdmin.register Source do
   menu priority: 4
 
-  permit_params :source_type_id, :title, :subtitle, :text, :info, :date_yyyy, :date_mm, :date_dd, :display_order, :link, :image, :pdf
+  permit_params :source_type_id, :title, :subtitle, :text, :info, :date_yyyy, :date_mm, :date_dd, :date_display, :display_order, :link, :image, :pdf
 
   controller do
     def scoped_collection
@@ -33,6 +33,7 @@ ActiveAdmin.register Source do
     column :date_yyyy
     column :date_mm
     column :date_dd
+    column :date_display
     column :link do |x|
       if x.link.present?
         link_to x.link, x.link, target: "_blank"
@@ -65,6 +66,7 @@ ActiveAdmin.register Source do
       f.input :date_yyyy
       f.input :date_mm
       f.input :date_dd
+      f.input :date_display
       f.input :link
       f.input :image, as: :file
       f.input :pdf, as: :file
