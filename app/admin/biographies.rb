@@ -1,7 +1,7 @@
 ActiveAdmin.register Biography do
   menu priority: 2
 
-  permit_params :biography_type_id, :title, :subtitle, :text, :info, :date_yyyy, :date_mm, :date_dd, :display_order, :image, :pdf
+  permit_params :biography_type_id, :title, :subtitle, :text, :info, :date_yyyy, :date_mm, :date_dd, :date_display, :display_order, :image, :pdf
 
   controller do
     def scoped_collection
@@ -32,6 +32,7 @@ ActiveAdmin.register Biography do
     column :date_yyyy
     column :date_mm
     column :date_dd
+    column :date_display
     column :image do |x|
       if x.image.attached?
         image_tag x.image
@@ -58,6 +59,7 @@ ActiveAdmin.register Biography do
       f.input :date_yyyy
       f.input :date_mm
       f.input :date_dd
+      f.input :date_display
       f.input :image, as: :file
       f.input :pdf, as: :file
       f.input :display_order
