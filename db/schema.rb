@@ -77,6 +77,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_174528) do
     t.integer "date_yyyy"
     t.integer "date_mm"
     t.integer "date_dd"
+    t.string "date_display"
     t.float "display_order", default: 0.0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -138,6 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_01_174528) do
     t.integer "date_yyyy"
     t.integer "date_mm"
     t.integer "date_dd"
+    t.string "date_display"
     t.float "display_order", default: 0.0
     t.string "link"
     t.datetime "created_at", null: false
